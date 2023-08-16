@@ -47,16 +47,4 @@ class CaixaDaLanchonete {
         return `R$ ${total.toFixed(2).replace(".", ",")}`;
     }
 }
-
-const testar = new CaixaDaLanchonete();
-
-console.log(testar.calcularValorDaCompra('debito', ['chantily,1'])); // "Item extra não pode ser pedido sem o principal"
-console.log(testar.calcularValorDaCompra('debito', ['chantily,1', 'cafe,1'])); // "R$ 4,50"
-console.log(testar.calcularValorDaCompra('credito', ['combo1,1', 'cafe,2'])); // "R$ 15,96"
-console.log(testar.calcularValorDaCompra('dinheiro', ['sanduiche,1', 'queijo,1'])); // "R$ 8,07"
-console.log(testar.calcularValorDaCompra('vale-refeicao', ['chantily,1', 'cafe,2'])); //"Forma de pagamento inválida!"
-console.log(testar.calcularValorDaCompra('credito', ['combo3,1', 'suco,2'])); // "Item inválido!"
-console.log(testar.calcularValorDaCompra('debito', ['cafe,-1'])); // "Quantidade inválida!"
-console.log(testar.calcularValorDaCompra('dinheiro', [''])); // "Não há itens no carrinho de compra!"
-
 export { CaixaDaLanchonete };
